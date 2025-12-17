@@ -3,7 +3,7 @@
 {
     "name": "Account force early payment discount",
     "summary": "Allow forcing financial discounts for early payments",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "development_status": "Production/Stable",
     "category": "Account",
     "website": "https://github.com/OCA/account-payment",
