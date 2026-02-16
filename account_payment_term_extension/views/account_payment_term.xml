@@ -19,27 +19,28 @@
             <label for="early_discount" position="before">
                 <field name="sequential_lines" />
             </label>
-            <data>
-                <xpath expr="//sheet" position="inside">
-                    <separator string="Holidays" col="12" />
-                    <p class="text-muted">
-                        When a payment term coincides with a holiday, it is postponed to the chosen date.
-                    </p>
-                    <field name="holiday_ids" colspan="12">
-                        <list editable="top">
-                            <field name="holiday" />
-                            <field name="date_postponed" />
-                        </list>
-                    </field>
-                </xpath>
-            </data>
+            <xpath expr="//sheet" position="inside">
+                <separator string="Holidays" col="12" />
+                <p class="text-muted">
+                    When a payment term coincides with a holiday, it is postponed to the chosen date.
+                </p>
+                <field name="holiday_ids" colspan="12">
+                    <list editable="top">
+                        <field name="holiday" />
+                        <field name="date_postponed" />
+                    </list>
+                </field>
+            </xpath>
 
-            <field name="value_amount" position="after">
+
+            <xpath expr="//sheet//group[2]" position="attributes">
+                <attribute name="col">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='value_amount']" position="after">
                 <field name="amount_round" />
-            </field>
-            <field name="amount_round" position="after">
                 <field name="payment_days" />
-            </field>
+            </xpath>
         </field>
     </record>
 </odoo>
