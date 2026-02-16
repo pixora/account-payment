@@ -74,6 +74,19 @@
         <field name="priority" eval="20" />
         <field name="arch" type="xml">
             <search string="Search Payments">
+                
+                <field name="account_id" />
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="move_id" />
+                <field name="invoice_user_id" />
+                <field name="invoice_origin" />
+                <field name="date_maturity" />
+                <field name="amount_residual" />
+                <field name="amount_residual_currency" />
+                <field name="analytic_distribution" />
+                <field name="partner_ref" />
+                <field name="payment_term_id" />
                 <filter
                     name="posted_moves"
                     string="Posted"
@@ -141,19 +154,7 @@
                 <filter string="Date invoice" name="invoice_date" date="invoice_date" />
                 <filter string="Date" name="date" date="date" />
                 <separator />
-                <field name="account_id" />
-                <field name="name" />
-                <field name="partner_id" />
-                <field name="move_id" />
-                <field name="invoice_user_id" />
-                <field name="invoice_origin" />
-                <field name="date_maturity" />
-                <field name="amount_residual" />
-                <field name="amount_residual_currency" />
-                <field name="analytic_distribution" />
-                <field name="partner_ref" />
-                <field name="payment_term_id" />
-                <group expand="0" string="Group By">
+                <group >
                     <filter
                         string="Partner"
                         domain="[]"
